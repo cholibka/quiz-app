@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@tailwind base;
+@tailwind compzeronts;
+@tailwind utilities;
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.loader {
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 65vmin;
+    height: 20vmin;
+    z-index: 100;
+}
+
+.bottom {
+    position: relative;
+    bottom: -5vmin
+}
+
+.question_number {
+    position: absolute;
+    top: 5vh;
+    width: 65vmin;
+    height: 65vmin;
+    border-radius: 50%;
+    border: 3px solid #eee;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.question_number_container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.7s ease-in;
+}
+
+.question {
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 3vmin;
+    height: 3vmin;
+    transition: transform 0.4s linear;
+    will-change: transform;
+}
+
+.qt {
+    transition: transform 0.4s ease-in;
+    transform: scale(1.7);
+    will-change: transform;
+}
+
+.zero {
+    background: white;
+    top: -1.5vmin;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.one {
+    background: white;
+    right: 10.5vmin;
+    top: 5.5vmin;
+}
+
+.two {
+    background: white;
+    right: -0.2vmin;
+    bottom: 40.5vmin;
+}
+
+.three {
+    background: white;
+    right: 0.5vmin;
+    bottom: 20vmin;
+}
+
+.four {
+    background: white;
+    right: 12vmin;
+    margin: auto;
+    bottom: 4vmin;
+}
+
+.five {
+    background: white;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: -2vmin;
+}
+
+.six {
+    background: white;
+    left: 12vmin;
+    bottom: 4vmin
+}
+
+.seven {
+    background: white;
+    left: 0;
+    bottom: 20vmin;
+}
+
+.eight {
+    background: white;
+    left: -0.2vmin;
+    bottom: 40.5vmin;
+}
+
+.nine {
+    background: white;
+    left: 10.5vmin;
+    top: 5.5vmin;
+}
+
+.progress {
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    position: relative;
+    margin: 15px 0;
+    height: 30px;
+    width: 500px;
+}
+
+.progress-done {
+    background: linear-gradient(to left, #f050ae, #d883ff, #9336fd);
+    box-shadow: 0 3px 3px -5px #f050ae, 0 2px 5px #9336fd;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 0.1s ease 0.3s;
+}
+
+
+
+
